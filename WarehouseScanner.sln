@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseScanner.Server", "WarehouseScanner.Server\WarehouseScanner.Server.csproj", "{6F110454-2F64-4DF7-A972-68AF132E44E6}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "warehousescanner.client", "warehousescanner.client\warehousescanner.client.esproj", "{AB98CBD1-D80C-4E02-8C59-9911BB4B48FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F110454-2F64-4DF7-A972-68AF132E44E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F110454-2F64-4DF7-A972-68AF132E44E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F110454-2F64-4DF7-A972-68AF132E44E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F110454-2F64-4DF7-A972-68AF132E44E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB98CBD1-D80C-4E02-8C59-9911BB4B48FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB98CBD1-D80C-4E02-8C59-9911BB4B48FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB98CBD1-D80C-4E02-8C59-9911BB4B48FE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AB98CBD1-D80C-4E02-8C59-9911BB4B48FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB98CBD1-D80C-4E02-8C59-9911BB4B48FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB98CBD1-D80C-4E02-8C59-9911BB4B48FE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5E7463E-9447-45C4-A8BA-FA0AE879E59D}
+	EndGlobalSection
+EndGlobal

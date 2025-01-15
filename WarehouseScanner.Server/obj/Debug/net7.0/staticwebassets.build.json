@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "d4KFvi/B7yEQPPReH/rw+GR5Z1Vyq22papKLVVF+/74=",
+  "Source": "WarehouseScanner.Server",
+  "BasePath": "_content/WarehouseScanner.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\camer\\Desktop\\Apps\\WarehouseScanner\\warehousescanner.client\\warehousescanner.client.esproj",
+      "Version": 2,
+      "Source": "warehousescanner.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
