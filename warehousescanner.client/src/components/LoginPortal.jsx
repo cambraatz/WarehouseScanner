@@ -19,7 +19,7 @@ import { scrapeDate,
     requestAccess,
     isCompanyValid,
     getCompany_DB, 
-    showFailFlag} from '../Scripts/helperFunctions';
+    showFailFlag} from '../scripts/helperFunctions';
 
 /*/////////////////////////////////////////////////////////////////////
 
