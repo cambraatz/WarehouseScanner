@@ -49,7 +49,7 @@ const Header = (props) => {
                 </div>
                 <div className="sticky_header" onClick={props.onClick}>
                     <div id="main_title">
-                        <h1>Driver Manifest</h1>
+                        <h1>Warehouse Scanner</h1>
                         <h2 id="title_dash">-</h2>
                         <h2>{props.title}</h2>
                     </div>

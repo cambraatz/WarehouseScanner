@@ -137,7 +137,8 @@ const LoginPortal = () => {
     
     async function renderCompany() {
         // getCompany() also caches company...
-        const company = await getCompany_DB();
+        //const company = await getCompany_DB();
+        const company = "Brauns Express Inc";
         // set company state to value or placeholder... 
         if(company) {
             console.log(`renderCompany retrieved ${company} from database...`);
@@ -352,8 +353,7 @@ const LoginPortal = () => {
         // nullify driver credentials...
         const user_data = {
             USERNAME: "",
-            PASSWORD: "",
-            POWERUNIT: ""
+            PASSWORD: ""
         }
         setDriverCredentials(user_data);
 
@@ -394,19 +394,13 @@ const LoginPortal = () => {
     async function submitNewUser(e) {
         e.preventDefault();
 
-        /* this may be inactive... 
-        if (e.target.id == "edit_new_user") {
-            updateDriver();
-            return;
-        } */
-
         // handle new user menu button clicks...
         switch(e.target.parentElement.id){
             case "set_password":
-                pullDriver();
+                //pullDriver();
                 break;
             case "submit_user":
-                updateDriver();
+                //updateDriver();
                 break;
             case "cancel_user":
                 closePopup();
@@ -427,20 +421,11 @@ const LoginPortal = () => {
     async function updateNewUser(e) {
         //if (document.getElementById(e.target.id).className == "invalid_input"){
         if (document.getElementById(e.target.id).classList.contains("invalid_input")){
-            //document.getElementById("username").className = "";
-            //document.getElementById("password").className = "";
-            //document.getElementById("powerunit").className = "";
-
             // reset styling to default...
             document.getElementById("username").classList.remove("invalid_input");
 
             // skip password + powerunit when username specific...
-            if (document.getElementById("password")){
-                document.getElementById("password").classList.remove("invalid_input");
-            }
-            if (document.getElementById("powerunit")){
-                document.getElementById("powerunit").classList.remove("invalid_input");
-            }
+            document.getElementById("password").classList.remove("invalid_input");
         }
 
         // update credentials state on change...
@@ -458,34 +443,21 @@ const LoginPortal = () => {
                     PASSWORD: val
                 });
                 break;
-            case 'powerunit':
-                setDriverCredentials({
-                    ...driverCredentials,
-                    POWERUNIT: val
-                });
-                break;
             default:
                 break;
         }
     }
-
-    // package helper functions to organize popup functions...
-    const onPress_functions = {
-        "pullDriver": pullDriver,
-        "updateDriver": updateDriver,
-        "cancelDriver": cancelDriver
-    };
 
     // render template...
     return(
         <div id="webpage">
             <Header 
                 company={company}
-                title="Driver Login"
+                title="Login Portal"
                 alt="Enter your login credentials"
                 status="Off"
                 currUser="Sign In"
-                MFSTDATE={null} 
+                MFSTDATE={null}
                 POWERUNIT={null}
                 STOP = {null}
                 PRONUMBER = {null}
@@ -501,7 +473,7 @@ const LoginPortal = () => {
                         <div className="fail_flag" id="ff_login_un">
                             <p>Username is required!</p>
                         </div>
-                    </div>        
+                    </div>
                     <div className="input_wrapper">
                         <label htmlFor="PASSWORD">Password:</label>
                         <input type="password" id="PASSWORD" value={driverCredentials.PASSWORD} onChange={handleLoginChange}/>
@@ -520,17 +492,12 @@ const LoginPortal = () => {
                     </div>
                     <Popup 
                         message={message}
-                        date={formData.deliveryDate}
-                        powerunit={updateData.POWERUNIT}
+                        date={currDate}
                         closePopup={closePopup}
-                        handleDeliveryChange={handleDeliveryChange}
-                        handleUpdate={handleUpdate}
-                        updateData={updateData}
                         driverCredentials={driverCredentials}
                         credentials={driverCredentials}
                         pressButton={submitNewUser}
                         updateNew={updateNewUser}
-                        onPressFunc={onPress_functions}
                     />
                 </div>
             </div>
